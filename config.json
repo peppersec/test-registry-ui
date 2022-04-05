@@ -1,9 +1,36 @@
 {
   "ensDomain": "testrelayer.eth",
+  "ensSubdomains": {
+    "mainnet": "test-relayer-mainnet.tornado.cash",
+    "bsc": "test-relayer-bsc.tornado.cash"
+  },
   "relayer": "0x090D03d9f18e9336416A515EfC1E47dB68bC270E",
+  "workers": ["0xa0Ee7A142d267C1f36714E4a8F75612F20a79720"],
   "ensResolver": "0x4976fb03C32e5B8cfe2b6cCB31c09Ba78EBaBa41",
-  "whale": "0xF977814e90dA44bFA03b6295A0616a897441aceC",
   "tokenAddresses": {
-    "torn": "0x77777FeDdddFfC19Ff86DB637967013e6C6A116C"
+    "torn": "0x77777FeDdddFfC19Ff86DB637967013e6C6A116C",
+    "dai": "0x6B175474E89094C44Da98b954EedeAC495271d0F",
+    "usdc": "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+    "cdai": "0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643",
+    "usdt": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
+    "wbtc": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
+  },
+  "whales": {
+    "eth": "0xBE0eB53F46cd790Cd13851d5EFf43D12404d33E8",
+    "torn": "0xF977814e90dA44bFA03b6295A0616a897441aceC",
+    "dai": "0xf39d30fa570db7940e5b3a3e42694665a1449e4b",
+    "usdc": "0x47ac0fb4f2d84898e4d9e7b4dab3c24507a6d503",
+    "cdai": "0x01Ec5e7e03e2835bB2d1aE8D2edDEd298780129c",
+    "usdt": "0x5754284f345afc66a98fbb0a0afe71e0f007b949",
+    "wbtc": "0xE78388b4CE79068e89Bf8aA7f218eF6b9AB0e9d0"
+  },
+  "tokenAmount": {
+    "eth": "1000",
+    "torn": "10000",
+    "dai": "500000",
+    "usdc": "5000",
+    "cdai": "15000000",
+    "usdt": "5000",
+    "wbtc": "100"
   }
 }
