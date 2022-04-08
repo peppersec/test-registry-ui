@@ -2,12 +2,16 @@
   "name": "test-registry-ui",
   "version": "1.0.0",
   "main": "src/index.js",
+  "type": "module",
   "license": "MIT",
   "dependencies": {
+    "commander": "^9.1.0",
     "dotenv": "^16.0.0",
     "ethers": "^5.5.4"
   },
   "scripts": {
-    "start": "node src/index.js"
+    "start": "yarn registerRelayer && yarn topUp wallet",
+    "registerRelayer": "node --es-module-specifier-resolution=node --no-warnings src/index.js",
+    "topUp": "node --es-module-specifier-resolution=node --no-warnings cli.js"
   }
 }
