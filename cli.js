@@ -1,6 +1,11 @@
 import { program } from "commander";
 
-import { topUpEther, topUpTorn, topUpWallet } from "./src/topUp";
+import {
+  topUpEther,
+  topUpTorn,
+  topUpWallet,
+  topUpDeflationary,
+} from "./src/topUp";
 
 async function main() {
   program
@@ -29,6 +34,14 @@ async function main() {
     .option("-w, --wallet <address>", "Wallet that will receive tokens")
     .action(async (options) => {
       await topUpWallet(options.wallet);
+    });
+
+  program
+    .command("deflationary")
+    .description("Send pre-configured deflationary test tokens")
+    .option("-w, --wallet <address>", "Wallet that will receive tokens")
+    .action(async (options) => {
+      await topUpDeflationary(options.wallet);
     });
 
   try {

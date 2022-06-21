@@ -15,6 +15,11 @@
     "usdt": "0xdAC17F958D2ee523a2206206994597C13D831ec7",
     "wbtc": "0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599"
   },
+  "deflationaryTokenAddresses": {
+    "dcap": "0xfd5f65a7e4fae82778be1085ffd2f1de5b2de92c",
+    "$jkwon": "0x644Bd89Bc4924088A8A338D11EDE53f342475418",
+    "ddogs": "0xde2667fEBd1499b698a15DE4a01B991A30AFAE59"
+  },
   "whales": {
     "eth": "0xBE0eB53F46cd790Cd13851d5EFf43D12404d33E8",
     "torn": "0xF977814e90dA44bFA03b6295A0616a897441aceC",
@@ -24,6 +29,11 @@
     "usdt": "0x5754284f345afc66a98fbb0a0afe71e0f007b949",
     "wbtc": "0xE78388b4CE79068e89Bf8aA7f218eF6b9AB0e9d0"
   },
+  "deflationaryWhales": {
+    "dcap": "0x25E6f0446D8F77E84300165fDE81F2e4B7228577",
+    "$jkwon": "0xD9B8Fa41e2b7E4414631Ff722Ec9C7Ef24251453",
+    "ddogs": "0x0d614C4CBd90B8E6FE1120066D197a606B213e66"
+  },
   "tokenAmount": {
     "eth": "1000",
     "torn": "10000",
@@ -32,5 +42,10 @@
     "cdai": "15000000",
     "usdt": "5000",
     "wbtc": "100"
+  },
+  "deflationaryTokenAmount": {
+    "dcap": "100000",
+    "$jkwon": "10000000",
+    "ddogs": "1000000"
   }
 }
