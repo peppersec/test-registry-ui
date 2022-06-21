@@ -9,9 +9,7 @@ const provider = new providers.JsonRpcProvider(RPC_URL);
 async function getSignerFromAddress(address) {
   await provider.send("hardhat_impersonateAccount", [address]);
 
-  let signer = await provider.getSigner(address);
-  signer.address = signer._address;
-  return signer;
+  return provider.getUncheckedSigner(address);
 }
 
 function getToken(tokenAddress) {
