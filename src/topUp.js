@@ -14,7 +14,9 @@ const stealMoney =
     try {
       console.log(`transfer ${name} to wallet`);
 
-      const whale = await getSignerFromAddress(config.whales[name]);
+      const whale = await getSignerFromAddress(
+        config.whales[name] || config.deflationaryWhales[name]
+      );
 
       const token = getToken(tokenAddress).connect(whale);
 
@@ -22,7 +24,10 @@ const stealMoney =
 
       await token.transfer(
         walletAddress || WALLET_ADDRESS,
-        parseUnits(config.tokenAmount[name], decimals)
+        parseUnits(
+          config.tokenAmount[name] || config.deflationaryTokenAmount[name],
+          decimals
+        )
       );
     } catch (e) {
       console.error("stealMoney", name, tokenAddress, e.message);
@@ -59,4 +64,12 @@ async function topUpWallet(address) {
   await Promise.all(promises);
 }
 
-export { topUpEther, topUpTorn, topUpWallet };
+async function topUpDeflationary(address) {
+  const promises = Object.entries(config.deflationaryTokenAddresses).map(
+    stealMoney(address)
+  );
+
+  await Promise.all(promises);
+}
+
+export { topUpEther, topUpTorn, topUpWallet, topUpDeflationary };
